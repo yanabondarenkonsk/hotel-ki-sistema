@@ -1,0 +1,319 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+table {
+    border-spacing: 0;
+    width: 100%;
+}
+
+.cursor_pointer {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.grid_table {
+    background: #fff;
+    border: solid #ccc;
+    border-width: 1px 1px 0 0;
+    color: #727271;
+    overflow: clip;
+    width: auto;
+}
+
+.grid_table thead tr th:first-child {
+    color: #727271;
+    font-weight: normal;
+}
+
+.grid_table tr.day_week_row th:not(:first-of-type) {
+    background: #efefef;
+}
+
+.grid_table tr th.weekend_cell,
+.grid_table tr td.weekend_cell {
+    background: #ffeded;
+}
+
+.grid_table tr th.weekend_cell {
+    color: #e31e24;
+}
+
+.grid_table tr[data-eq-id] {
+    display: none;
+}
+
+.grid_table tr[data-eq-id].active {
+    display: table-row;
+}
+
+.grid_table tr th,
+.grid_table tr td {
+    background: #fff;
+    border: solid #ccc;
+    border-width: 0 1px 1px 0;
+    padding: 4px 10px;
+    position: relative;
+}
+
+.grid_table tr th:first-child,
+.grid_table tr td:first-child {
+    left: 0;
+    max-width: 100px;
+    min-width: 100px;
+    position: sticky;
+    z-index: 3;
+    width: 100px;
+}
+
+.grid_table [data-colspan].active {
+    opacity: 1;
+}
+
+@media (min-width: 576px) {
+    .grid_table tr th:first-child,
+    .grid_table tr td:first-child {
+        max-width: 200px;
+        min-width: 200px;
+        width: 200px;
+    }
+}
+
+.grid_table tr th:last-child,
+.grid_table tr td:last-child {
+    border-right: 0;
+}
+
+.grid_table tr > *:first-of-type {
+    border-left: 1px solid #ccc;
+}
+
+.grid_table tr.book_row td:not(:first-of-type) {
+    max-width: 60px;
+    min-width: 60px;
+    width: 60px;
+    height: 60px;
+    max-height: 60px;
+    min-height: 60px;
+    text-align: center;
+}
+
+.grid_table tr .cell_inner {
+    padding-left: 30px;
+    word-break: break-word;
+}
+
+.grid_table tr .equal_group_name .cell_inner {
+    align-items: center;
+    display: inline-flex;
+    gap: 20px;
+    left: 11px;
+    position: sticky;
+}
+
+.grid_table tr .equal_group_name .cell_inner:before {
+    background: #ccc;
+    bottom: -4px;
+    content: '';
+    left: -11px;
+    position: absolute;
+    top: -4px;
+    width: 1px;
+}
+
+.grid_table tr .equal_group_name .cell_inner .dashed {
+    left: 0;
+}
+
+.grid_table tr .dashed {
+    align-items: center;
+    display: flex;
+    left: 10px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 20px;
+}
+
+.grid_table tr .dashed:before {
+    background: url('https://lk.hotel-ki.ru/images/dashed.png') repeat-y center top;
+    content: '';
+    bottom: 0;
+    display: none;
+    height: 100%;
+    left: calc(50% - 1px);
+    position: absolute;
+    width: 2px;
+}
+
+.grid_table tr.active .dashed:before {
+    display: block;
+}
+
+.grid_table tr .equal_group_name .dashed:before {
+    height: 50%;
+}
+
+.grid_table .open_row {
+    align-items: center;
+    background: #fff;
+    border: 2px solid #5b5b5b;
+    cursor: pointer;
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    line-height: 1;
+    position: relative;
+    width: 20px;
+    z-index: 1;
+}
+
+.grid_table .dashed .open_row:before {
+    content: '\002B';
+}
+
+.grid_table .active .dashed .open_row:before {
+    content: '\2212';
+}
+
+.grid_table *.bold_text {
+    color: #2b2a29;
+    font-weight: bold;
+}
+
+.grid_table *.green_bg {
+    background: #04b200;
+    color: #fff;
+}
+
+.grid_table .control_icon {
+    background: #727271;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+}
+
+.grid_table .control_icon .icon:first-child {
+    border-right: 1px solid #ccc;
+}
+
+.grid_table .control_icon .icon:before {
+    margin: 6px 8px;
+}
+
+.grid_table [data-colspan] {
+    align-items: center;
+    border: 1px solid #ccc;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    opacity: 0;
+    padding: 6px;
+    position: absolute;
+    top: 10px;
+    z-index: 2;
+}
+
+.grid_table [data-colspan] div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.multiple_booking > div.book_card_icon {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    line-height: 12px;
+    font-size: 12px;
+    border-right: 1px solid #3e3e3e;
+    padding: 1px 3px 1px 3px;
+    vertical-align: top;
+    padding-top: 1px;
+    border-bottom: 1px solid #3e3e3e;
+}
+
+.multiple_booking > div.centring {
+    margin-bottom: 0;
+    margin-top: 18px;
+}
+
+.icon:before {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+    display: block;
+    filter: invert(49%) sepia(5%) saturate(87%) hue-rotate(22deg) brightness(90%) contrast(87%);
+    height: 30px;
+    width: 30px;
+}
+
+.icon_white:before {
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(328deg) brightness(102%) contrast(101%);
+}
+
+.icon_small:before {
+    height: 20px;
+    width: 20px;
+}
+
+.icon_eye:before {
+    background-image: url('https://lk.hotel-ki.ru/lk/images/icons/eye.svg');
+}
+
+.icon_pencil:before {
+    background-image: url('https://lk.hotel-ki.ru/lk/images/icons/pencil.svg');
+}
+
+.icon_ruble:before {
+    background-image: url('https://lk.hotel-ki.ru/lk/images/icons/ruble.svg');
+}
+
+.icon_repair:before {
+    background-image: url('https://lk.hotel-ki.ru/lk/images/icons/repair.png');
+}
+
+/* booking statuses */
+.s_refund_wanted {
+    background: #c3f1ff;
+}
+
+.s_prepayed {
+    background-color: #d8fb9d;
+}
+
+.s_total_payed {
+    background-color: #a5ff0d;
+}
+
+.s_prepay_wanted {
+    background-color: #dcdcdc;
+}
+
+.s_arrival_payment {
+    background-color: #ffe95e;
+}
+
+.cell_closed, .renovation {
+    background: #d2cde7;
+}
+
+.book {
+    cursor: pointer;
+}

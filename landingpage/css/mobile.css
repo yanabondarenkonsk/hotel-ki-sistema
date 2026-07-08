@@ -1,0 +1,470 @@
+/* =====================================================
+   mobile.css — мобильная адаптация hotel-ki landing
+   Подключить ПОСЛЕ style_land_2.css / style.css
+   ===================================================== */
+
+/* ==============================================
+   ГЛОБАЛЬНЫЙ ЗАПРЕТ горизонтального переполнения
+   ============================================== */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* box-sizing для всех блоков */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ---------- Burger button ---------- */
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  background: #fff;
+  border: 1.5px solid rgba(100, 140, 60, 0.35);
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  transition: background 0.15s, border-color 0.15s, box-shadow 0.15s;
+  flex-shrink: 0;
+  z-index: 30;
+  /* Прижимаем к правому краю через margin-left: auto,
+     JS вставляет бургер перед .header__right,
+     поэтому header__right уходит в крайний правый угол */
+  margin-left: auto;
+}
+
+.burger:hover {
+  background: rgba(240, 250, 230, 0.95);
+  border-color: rgba(85, 179, 0, 0.55);
+  box-shadow: 0 2px 8px rgba(68, 121, 17, 0.15);
+}
+
+.burger__line {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--text-main, #1e2a14);
+  transition: transform 0.22s ease, opacity 0.16s ease;
+  transform-origin: center;
+}
+
+/* Крест при открытом меню */
+.burger--open .burger__line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.burger--open .burger__line:nth-child(2) {
+  opacity: 0;
+}
+.burger--open .burger__line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ---------- Mobile nav drawer ---------- */
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 25;
+  pointer-events: none;
+}
+
+.mobile-nav__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 30, 10, 0.45);
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.mobile-nav__panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(300px, 85vw);
+  background: linear-gradient(160deg, #f7faf4 0%, #eef5e6 100%);
+  box-shadow: -6px 0 32px rgba(20, 40, 10, 0.18);
+  transform: translateX(100%);
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  padding: 80px 28px 32px;
+  gap: 4px;
+  border-left: 1px solid rgba(196, 214, 178, 0.8);
+}
+
+/* Открытое состояние */
+.mobile-nav--open {
+  pointer-events: auto;
+}
+
+.mobile-nav--open .mobile-nav__backdrop {
+  opacity: 1;
+}
+
+.mobile-nav--open .mobile-nav__panel {
+  transform: translateX(0);
+}
+
+.mobile-nav__link {
+  display: block;
+  padding: 13px 4px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-main, #1e2a14);
+  border-bottom: 1px solid rgba(196, 214, 178, 0.5);
+  transition: color 0.14s, padding-left 0.14s;
+}
+
+.mobile-nav__link:last-of-type {
+  border-bottom: none;
+}
+
+.mobile-nav__link:hover {
+  color: var(--accent-dark, #447911);
+  padding-left: 6px;
+}
+
+.mobile-nav__cta {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent-dark, #447911), var(--accent, #55b300));
+  color: #f8fff2;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(68, 121, 17, 0.3);
+}
+
+.mobile-nav__phone {
+  margin-top: 16px;
+  font-size: 15px;
+  color: var(--text-muted, #5a6650);
+}
+
+.mobile-nav__phone a {
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-main, #1e2a14);
+  margin-top: 2px;
+}
+
+/* =====================================================
+   BREAKPOINT: ≤ 1024px
+   ===================================================== */
+@media (max-width: 1024px) {
+
+  /* Скрываем десктопный nav и CTA-кнопку, показываем бургер */
+  .header__nav {
+    display: none !important;
+  }
+
+  .header__cta {
+    display: none !important;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  /* Hero */
+  .hero__inner {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero__visual {
+    order: 2;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  /* Карточка шахматки не растягивает страницу */
+  .hero-card {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  /* Шахматка: горизонтальный скролл ВНУТРИ карточки */
+  .hero-card__grid {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+  }
+
+  /* Таблица имеет фиксированную мин-ширину и скроллится внутри */
+  .hero-card__grid .grid_table {
+    width: auto !important;
+    min-width: 540px;
+  }
+
+  /* About / Demo / Footer */
+  .about,
+  .demo,
+  .footer__inner {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Карточки 2 колонки */
+  .cards--grid-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Functional — стек */
+  .functional {
+    grid-template-columns: 1fr !important;
+    padding: 20px 16px !important;
+    gap: 16px !important;
+  }
+
+  .functional__nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .functional__tab {
+    flex: 1 1 auto;
+    padding: 10px 12px !important;
+    font-size: 14px !important;
+    gap: 8px !important;
+  }
+
+  .functional__tab-icon {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .functional__panel {
+    min-height: auto !important;
+  }
+}
+
+/* =====================================================
+   BREAKPOINT: ≤ 768px
+   ===================================================== */
+@media (max-width: 768px) {
+
+  .container {
+    padding: 0 16px !important;
+  }
+
+  /* Header */
+  .header__inner {
+    padding: 10px 16px !important;
+    gap: 12px !important;
+  }
+
+  .header__phone {
+    display: none;
+  }
+
+  .header__right {
+    gap: 8px !important;
+  }
+
+  .header__cta {
+    font-size: 13px !important;
+    padding: 9px 14px !important;
+  }
+
+  /* Logo text subtitle — прячем */
+  .logo-text__subtitle {
+    display: none;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 28px 0 24px !important;
+  }
+
+  .hero__title {
+    font-size: 28px !important;
+  }
+
+  .hero__subtitle {
+    font-size: 16px !important;
+  }
+
+  .hero__actions {
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100%;
+  }
+
+  .hero__actions .button {
+    width: 100% !important;
+    max-width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: normal;
+    text-align: center;
+  }
+
+  /* Шахматка на мобиле — компактнее */
+  .hero-card {
+    padding: 14px 12px !important;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .hero-card__header {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .hero-card__badge {
+    font-size: 11px !important;
+    padding: 3px 8px !important;
+  }
+
+  /* Sections */
+  .section {
+    padding: 32px 0 !important;
+  }
+
+  .section__title {
+    font-size: 24px !important;
+  }
+
+  .section__subtitle {
+    font-size: 15px !important;
+  }
+
+  /* Cards → 1 колонка */
+  .cards--grid-4 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .functional__tab {
+    padding: 9px 10px !important;
+    font-size: 13px !important;
+    flex: 1 1 calc(50% - 4px);
+    min-width: 0;
+    gap: 8px !important;
+  }
+
+  .functional__tab-icon {
+    width: 28px !important;
+    height: 28px !important;
+    flex-shrink: 0;
+  }
+
+  .functional__tab-icon img {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .functional__content-title {
+    font-size: 20px !important;
+  }
+
+  .functional__list li {
+    font-size: 14px !important;
+  }
+
+  /* About */
+  .about__text .section__title {
+    font-size: 22px !important;
+  }
+
+  /* Demo form */
+  .demo__form {
+    padding: 16px 14px !important;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Footer */
+  .footer__inner {
+    gap: 20px !important;
+  }
+
+  /* FAQ */
+  .faq-item__question {
+    font-size: 14px !important;
+  }
+
+  .faq-item__body {
+    font-size: 14px !important;
+  }
+}
+
+/* =====================================================
+   BREAKPOINT: ≤ 480px
+   ===================================================== */
+@media (max-width: 480px) {
+
+  /* Логотип — только картинка без текста */
+  .logo-text {
+    display: none;
+  }
+
+  .header__logo-img {
+    width: 80px !important;
+  }
+
+  /* Hero */
+  .hero__title {
+    font-size: 24px !important;
+  }
+
+  .hero__meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px !important;
+  }
+
+  .hero__meta-separator {
+    display: none;
+  }
+
+  /* Functional tabs — по одному в строке */
+  .functional__tab {
+    flex: 1 1 100%;
+  }
+
+  /* Кнопка "Связаться в TG" */
+  a[href*="t.me"] img {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  /* Table scroll */
+  .hero-card__grid {
+    font-size: 10px !important;
+  }
+
+  /* Button */
+  .button {
+    font-size: 15px !important;
+    padding: 13px 20px !important;
+  }
+}
+
+/* =====================================================
+   Скрол на теле — блокируем при открытом меню
+   ===================================================== */
+body.nav-open {
+  overflow: hidden;
+}

@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMS система управления номерным фондом</title>
+	
+	<link rel="icon" type="image/png" href="https://hotel-ki.ru/images/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="https://hotel-ki.ru/images/favicon/favicon.svg">
+	<link rel="shortcut icon" href="https://hotel-ki.ru/images/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://hotel-ki.ru/images/favicon/apple-touch-icon.png">
+
+  <!--
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?compat=recaptcha" async defer></script>
+  
+	<script async="" src="landingpage/js/tag.js"></script>
+  
+  <script type="text/javascript" async="" charset="utf-8" src="landingpage/js/recaptcha__ru.js" crossorigin="anonymous" integrity="sha384-m0THsn2S3zG1X/X6I4AL6t9SNv9RUa3aai0w0qB+tigzXRiKWRkHZID62JeCICRX"></script>
+  <script>
+	  var recaptcha_key = '6LdzkS0rAAAAAN1X1zBJUHgnsbJznq09sHgl3SvL';
+	</script>
+  -->
+
+	<script src="landingpage/js/api.js"></script>
+
+  
+
+	<meta content="Система управления номерным фондом для отелей и гостиниц с шахматкой номеров, online модуль бронирования для сайта отеля." name="description">
+
+	<meta name="yandex-verification" content="019d47a823a281ac">
+	
+	
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="landingpage/css/css2.css" rel="stylesheet">
+    <link rel="stylesheet" href="landingpage/css/normalize.css">
+    <link rel="stylesheet" href="landingpage/css/style_land_2.css">
+    <link rel="stylesheet" href="landingpage/css/table_land_2.css">
+	  <link rel="stylesheet" href="landingpage/css/mobile.css">
+	
+	<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@type": "Organization",
+	  "url": "https://hotel-ki.ru",
+	  "name": "Hotel KI",
+	  "contactPoint": [
+		{
+		  "@type": "ContactPoint",
+		  "telephone": "+7-913-925-32-69",
+		  "contactType": "sales",
+		  "areaServed": "RU",
+		  "availableLanguage": "ru"
+		},
+		{
+		  "@type": "ContactPoint",
+		  "telephone": "+7-913-784-20-18",
+		  "contactType": "sales",
+		  "areaServed": "RU",
+		  "availableLanguage": "ru"
+		}
+	  ]
+	}
+	</script>
+
+	<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@type": "SoftwareApplication",
+	  "name": "Hotel KI",
+	  "applicationCategory": "BusinessApplication",
+	  "operatingSystem": "Web",
+	  "url": "https://hotel-ki.ru/",
+	  "description": "Онлайн-система управления номерным фондом (PMS) для отелей и баз отдыха: шахматка бронирований, модуль прямых продаж и лендинг, управление ценами, аналитика, документы и интеграции.",
+	  "publisher": {
+		"@type": "Organization",
+		"name": "Hotel KI",
+		"legalName": "ООО «Город Диджитал»"
+	  },
+	  "areaServed": "RU",
+	  "inLanguage": "ru"
+	}
+	</script>
+
+  </head>
+  <body>
+    <div class="page">
+      <!-- Header -->
+      <header class="header">
+        <div class="container header__inner">
+          <div class="header__logo">
+            <img src="images/logo_hotelki.svg" alt="Hotel KI (Хотелки) - система управления отелем" class="header__logo-img">
+            <div class="logo-text">
+              <span class="logo-text__title">hotel-ki.ru</span>
+              <span class="logo-text__subtitle">PMS для отелей и апартаментов</span>
+            </div>
+          </div>
+
+          <nav class="header__nav">
+		<a href="https://hotel-ki.ru/sistema_dlia_otelia.html#features" class="header__link">Преимущества</a>
+		<a href="https://hotel-ki.ru/sistema_dlia_otelia.html#functional" class="header__link">Функционал</a>
+		<a href="https://hotel-ki.ru/sistema_dlia_otelia.html#about" class="header__link">О нас</a>
+		<a href="https://hotel-ki.ru/sistema_dlia_otelia.html#faq" class="header__link">FAQ</a>
+		<a href="https://hotel-ki.ru/sistema_dlia_otelia.html#contacts" class="header__link">Контакты</a>
+		<a href="https://lk.hotel-ki.ru/" class="header__link">Вход</a>
+          </nav>
+
+          <div class="header__right">
+            <div class="header__phone">
+              <span class="header__phone-label">Отдел продаж</span>
+              <a href="tel:+79137842018" class="header__phone-number">+7 913 784‑20‑18</a>
+            </div>
+            <a href="https://hotel-ki.ru/sistema_dlia_otelia.html#demo" class="button button--primary header__cta">Демо-доступ</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+	  
+	  <a href="https://max.ru/u/f9LHodD0cOLwfbO4zHgiowjBcHhlUYzDmzMOxvwfihdHAvF44x_2Lp6g7H8" class="" style="height: 60px; width: 58px; position: fixed; display: block; bottom: 30px; right: 5px;  z-index:10; background-color: var(--accent); border-radius: 50%;">
+		<img src="images/icons/max_messenger.svg" alt="Связаться с командой Hotel KI" style="width: 60px; height: 60px; filter: invert(100%) brightness(100%);"></a>
+	  
+        <!-- Hero -->
+        <section class="hero section--highlight" id="top" style="background-image: url(/landingpage/img/background.png); background-size:cover;">
+          
+          <div class="container hero__inner">
+            <div class="hero__card">
+            
+              <div class="hero__label">Система управления номерным фондом</div>
+              <h1 class="hero__title">
+                Удобная PMS‑система
+                <span class="hero__title-accent">для отелей любого формата</span>
+              </h1>
+              <p class="hero__subtitle">
+                Управляйте бронированиями, ценами и загрузкой из одной облачной системы.
+                Больше прямых продаж, меньше ручной рутины и овербукинга.
+              </p>
+
+              <div class="hero__actions">
+                <a href="https://hotel-ki.ru/sistema_dlia_otelia.html#demo" class="button button--primary">Получить демо</a>
+                <a href="https://hotel-ki.ru/sistema_dlia_otelia.html#contacts" class="button button--ghost">Запросить консультацию</a>
+              </div>
+
+              <div class="hero__meta">
+                <div class="hero__meta-item">24/7 доступ из любой точки мира</div>
+                <div class="hero__meta-separator"></div>
+                <div class="hero__meta-item hero__meta-item--accent">Создано для отелей, апарт‑отелей и коттеджей</div>
+              </div>
+            </div>
+
+            <div class="hero__visual">
+              <div class="hero-card">
+                <div class="hero-card__header">
+                  <div class="hero-card__title">Шахматка заселения</div>
+                  <div class="hero-card__badge">98% загрузка сегодня</div>
+                </div>
+                <div class="hero-card__grid">
+                  
+		<table class="grid_table">
+        <thead id="grid_table_thead">
+            
+                <tr class="day_week_row"><th>число месяца</th><th class="weekend_cell">01</th><th>02</th><th>03</th><th>04</th><th>05</th><th>06</th><th class="weekend_cell">07</th><th class="weekend_cell">08</th><th>09</th><th>10</th><th>11</th><th>12</th></tr><tr class="day_month_row"><th>день недели</th><th class="weekend_cell">вс</th><th>пн</th><th>вт</th><th>ср</th><th>чт</th><th>пт</th><th class="weekend_cell">сб</th><th class="weekend_cell">вс</th><th>пн</th><th>вт</th><th>ср</th><th>чт</th></tr>
+        </thead>
+        <!--этот тег инициализирует создание html вставки происходит в другом месте-->
+            <tbody>
+
+<tr class="book_row active" id="eq_id_1">
+	<td colspan="13" class="equal_group_name">
+		<div class="cell_inner">
+			<div class="dashed"><div class="open_row green_bg"></div></div>
+
+			<div class="bold_text">2Х местный twin</div>
+
+			<a href="https://hotel-ki.ru/sistema_dlia_otelia.html#" class="edti_price_icon control_icon">
+				<i class="icon icon_ruble icon_white icon_small"></i>
+				<i class="icon icon_pencil icon_white icon_small"></i>
+			</a>
+
+			<div class="prices_show_hide cursor_pointer control_icon" data-toggle=".prices_show_hide_2">
+				<i class="icon icon_ruble icon_white icon_small"></i>
+				<i class="icon icon_eye icon_white icon_small"></i>
+			</div>
+		</div>
+	</td>
+</tr>
+<tr class="book_row active" data-eq-id="1">
+	<td class="room_name  " data-room-id="4" style="height: 55px">
+		<div class="cell_inner">
+		  <div class="dashed"></div>
+		  № 1
+		</div>
+	</td>
+	<td class="weekend_cell booking_closed" data-ymd="01.03.2026">
+<div class="s_arrival_payment book   active" data-booking-id="1088" data-group-id="736" data-ctra_id="0" data-colspan="2" title="Петров П.A." style="left: 50%; width: calc(200% + 2px);"><div class="centring">Петров П.A.</div>
+            </div>	
+</td><td class="booking_closed">
+</td><td class="empty pm am hint avalible booking_closed" data-title="03.03" data-empty-interval-id="16" data-order-numb="1" data-ymd="03.03.2026">
+    
+</td><td class="empty pm am hint avalible booking_closed" data-empty-interval-id="16" data-order-numb="2" data-ymd="04.03.2026">
+<div class="s_prepayed book  multiple_booking active" data-booking-id="921" data-group-id="613" data-ctra_id="0" data-colspan="2" title="Олегов Олег Олегович " style="left: 50%; width: calc(200% + 2px);"><div class="book_card_icon">3</div><div class="centring">Олегов Олег Олегович </div>
+            </div>	
+</td><td class="booking_closed">
+</td><td class="empty pm am hint avalible booking_closed" data-title="06.03" data-empty-interval-id="20" data-order-numb="1" data-ymd="06.03.2026">
+    
+</td><td class="empty pm am hint avalible weekend_cell" data-title="07.03" data-empty-interval-id="20" data-order-numb="2" data-ymd="07.03.2026">
+    
+</td><td class="empty pm am hint avalible weekend_cell booking_closed" data-empty-interval-id="20" data-order-numb="3" data-ymd="08.03.2026">
+<div data-ajax="{&quot;booking_id&quot;:1091,&quot;in_out&quot;:&quot;08.03.2026 - 11.03.2026&quot;,&quot;template&quot;:&quot;modal_form_edit_renovation&quot;}" class="renovation  active" data-colspan="3" style="left: 50%; width: calc(300% + 3px);" title="ремонт">
+                <i class="icon icon_repair icon_black icon_small"></i>
+            </div>	
+</td><td class="booking_closed">
+</td><td class="booking_closed">
+</td><td class="empty pm am hint avalible booking_closed" data-title="11.03" data-empty-interval-id="27" data-order-numb="1" data-ymd="11.03.2026">
+    
+</td><td class="empty pm am hint avalible" data-empty-interval-id="27" data-order-numb="2" data-ymd="12.03.2026">
+</td>
+</tr><tr class="book_row active" data-eq-id="1">
+	<td class="room_name  " data-room-id="5" style="height: 55px">
+		<div class="cell_inner">
+		  <div class="dashed"></div>
+		  № 2
+		</div>
+	</td>
+	<td class="weekend_cell empty pm am hint avalible" data-title="01.03" data-empty-interval-id="14" data-order-numb="1" data-ymd="01.03.2026">
+    
+</td><td class="empty pm am hint avalible booking_closed" data-empty-interval-id="14" data-order-numb="2" data-ymd="02.03.2026">
+<div class="s_refund_wanted book   active" data-booking-id="1087" data-group-id="735" data-ctra_id="0" data-colspan="4" title="Иванов И.А." style="left: 50%; width: calc(400% + 4px);"><div class="centring">Иванов И.А.</div>
+            </div>	
+</td><td class="booking_closed">
+</td><td class="booking_closed">
+</td><td class="booking_closed">
+</td><td class="empty pm am hint avalible booking_closed" data-title="06.03" data-empty-interval-id="18" data-order-numb="1" data-ymd="06.03.2026">
+    
+</td><td class="empty pm am hint avalible weekend_cell" data-title="07.03" data-empty-interval-id="18" data-order-numb="2" data-ymd="07.03.2026">
+    
+</td><td class="empty pm am hint avalible weekend_cell" data-title="08.03" data-empty-interval-id="18" data-order-numb="3" data-ymd="08.03.2026">
+    
+</td><td class="empty pm am hint avalible booking_closed" data-empty-interval-id="18" data-order-numb="4" data-ymd="09.03.2026">
+<div class="s_prepay_wanted book   active" data-booking-id="982" data-group-id="659" data-ctra_id="26" data-colspan="2" title="Федора Фортилеевна" style="left: 50%; width: calc(200% + 2px);"><div class="centring">Федора Фортилеевна</div>
+            </div>	
+</td><td class="booking_closed">
+</td><td class="empty pm am hint avalible booking_closed" data-title="11.03" data-empty-interval-id="26" data-order-numb="1" data-ymd="11.03.2026">
+    
+</td><td class="empty pm am hint avalible" data-empty-interval-id="26" data-order-numb="2" data-ymd="12.03.2026">
+</td>
+</tr><tr class="book_row active" data-eq-id="1">
+	<td class="room_name  " data-room-id="6" style="height: 55px">
+		<div class="cell_inner">
+		  <div class="dashed"></div>
+		  № 3
+		</div>
+	</td>
+	<td class="weekend_cell empty pm am hint avalible" data-title="01.03" data-empty-interval-id="13" data-order-numb="1" data-ymd="01.03.2026">
+    
+</td><td class="empty pm am hint avalible" data-title="02.03" data-empty-interval-id="13" data-order-numb="2" data-ymd="02.03.2026">
+    
+</td><td class="empty pm am hint avalible booking_closed" data-empty-interval-id="13" data-order-numb="3" data-ymd="03.03.2026">
+<div class="s_prepay_wanted book   active" data-booking-id="1017" data-group-id="682" data-ctra_id="0" data-colspan="3" title="Дмитриев. А.В." style="left: 50%; width: calc(300% + 3px);"><div class="centring">Дмитриев. А.В.</div>
+            </div>	
+</td><td class="booking_closed">
+</td><td class="booking_closed">
+</td><td class="empty pm am hint avalible booking_closed" data-title="06.03" data-empty-interval-id="19" data-order-numb="1" data-ymd="06.03.2026">
+    
+</td><td class="empty pm am hint avalible weekend_cell booking_closed" data-empty-interval-id="19" data-order-numb="2" data-ymd="07.03.2026">
+<div class="s_prepayed book  multiple_booking active" data-booking-id="1090" data-group-id="613" data-ctra_id="0" data-colspan="3" title="Олегов Олег Олегович " style="left: 50%; width: calc(300% + 3px);"><div class="book_card_icon">3</div><div class="centring">Олегов Олег Олегович </div>
+            </div>	
+</td><td class="weekend_cell booking_closed">
+</td><td class="booking_closed">
+</td><td class="empty pm am hint avalible booking_closed" data-title="10.03" data-empty-interval-id="25" data-order-numb="1" data-ymd="10.03.2026">
+    
+</td><td class="empty pm am hint avalible" data-title="11.03" data-empty-interval-id="25" data-order-numb="2" data-ymd="11.03.2026">
+    
+</td><td class="empty pm am hint avalible" data-empty-interval-id="25" data-order-numb="3" data-ymd="12.03.2026">
+</td>
+</tr><tr class="book_row active" data-eq-id="1">
+	<td class="room_name  " data-room-id="7" style="height: 55px">
+		<div class="cell_inner">
+		  <div class="dashed"></div>
+		  № 4
+		</div>
+	</td>
+	<td class="weekend_cell booking_closed" data-ymd="01.03.2026">
+<div class="s_total_payed book   active" data-booking-id="984" data-group-id="661" data-ctra_id="0" data-colspan="3" title="Новиков А.А." style="left: 50%; width: calc(300% + 3px);"><div class="centring">Новиков А.А.</div>
+            </div>	
+</td><td class="booking_closed">
+</td><td class="booking_closed">
+</td><td class="empty pm am hint avalible booking_closed" data-title="04.03" data-empty-interval-id="17" data-order-numb="1" data-ymd="04.03.2026">
+    
+</td><td class="empty pm am hint avalible" data-title="05.03" data-empty-interval-id="17" data-order-numb="2" data-ymd="05.03.2026">
+    
+</td><td class="empty pm am hint avalible booking_closed" data-empty-interval-id="17" data-order-numb="3" data-ymd="06.03.2026">
+<div class="s_prepay_wanted book   active" data-booking-id="1089" data-group-id="737" data-ctra_id="0" data-colspan="6" title="Сергеев Евгений" style="left: 50%; width: calc(600% + 6px);"><div class="centring">Сергеев Евгений</div>
+            </div>	
+</td><td class="weekend_cell booking_closed">
+</td><td class="weekend_cell booking_closed">
+</td><td class="booking_closed">
+</td><td class="booking_closed">
+</td><td class="booking_closed">
+</td><td class="booking_closed" data-ymd="12.03.2026">
+</td>
+</tr>
+
+
+        <!---->
+    </tbody></table>
+				
+                </div>
+              </div>
+              <div class="hero__hint">
+                Интерфейс шахматки в Личном кабинете.
+              </div>
+            </div>
+          </div>
+          
+        </section>
+
+
+
+
+        <!-- Advantages -->
+        <section class="section" id="features">
+          <div class="container">
+            <div class="section__head">
+              <h2 class="section__title">Основные преимущества</h2>
+              <p class="section__subtitle">
+                Всё, что нужно современному отелю: рост прямых продаж и прозрачное управление.
+              </p>
+            </div>
+
+            <div class="cards cards--grid-4">
+              <article class="card">
+                <h3 class="card__title">Прямые продажи</h3>
+                <p class="card__text" style="margin-bottom: 20px;">
+                  Модуль бронирования на сайте отеля без агентских комиссий. Гости видят актуальные цены и свободные номера.
+                </p>
+                <img src="landingpage/img/sells_lending.png" class="card_img">
+              </article>
+              <article class="card">
+                <h3 class="card__title">Интеграция с VK</h3>
+                <p class="card__text" style="margin-bottom: 20px;">
+                  Система поддерживает работу с VK Mini Apps. Гости смогут бронировать номера через мини-приложение
+                  прямо в группе отеля ВКонтакте. 
+                </p>
+                <img src="landingpage/img/vk.png" class="card_img">
+              </article>
+              <article class="card block_link">
+                <h3 class="card__title"><a href="https://hotel-ki.ru/sait_dlia_gostinicy.html">Лендинг для отелей</a></h3>
+                <p class="card__text" style="margin-bottom: 20px;">
+                  Готовая <a href="https://testhotel.hotel-ki.ru/" target="_blank">страница отеля</a> с модулем поиска и бронирования. Запускается без участия программистов.
+                </p>
+                <img src="landingpage/img/site_lending.png" class="card_img" style="margin-top: 20 px;">
+                <a href="https://hotel-ki.ru/sait_dlia_gostinicy.html" class="button button--primary button--wide">
+                  Подробнее
+                </a>
+              </article>
+              <article class="card">
+                <h3 class="card__title">Вложенные объекты</h3>
+                <p class="card__text" style="margin-bottom: 20px;">
+                  Коттеджи, корпуса, отдельные номера — система поддерживает
+                  сложные структуры бронирования. 
+                </p>
+                <img src="landingpage/img/complex_object.png" class="card_img" style="margin-top: 10 px;">
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Functional -->
+        <section class="section section--soft" id="functional"  >
+          <div class="container">
+            <div class="section__head">
+              <h2 class="section__title">Функционал системы</h2>
+            </div>
+
+            <div class="functional" id="functional-panel">
+              <nav class="functional__nav" role="tablist" aria-label="Функционал системы">
+                <button class="functional__tab functional__tab--active" type="button" role="tab" aria-selected="true" data-tab="bookings">
+                  <span class="functional__tab-icon"><img src="landingpage/img/icon/Bookings.svg" width="35px" height="35px"></span>
+                  <span>Работа с бронированиями</span>
+                </button>
+                <button class="functional__tab" type="button" role="tab" aria-selected="false" data-tab="direct-sales">
+                  <span class="functional__tab-icon"><img src="landingpage/img/icon/sells.svg" width="35px" height="35px"></span>
+                  <span>Модуль прямых продаж</span>
+                </button>
+                <button class="functional__tab" type="button" role="tab" aria-selected="false" data-tab="online-page">
+                  <span class="functional__tab-icon"><img src="landingpage/img/icon/Internet.svg" width="35px" height="35px"></span>
+                  <span>Online‑страница</span>
+                </button>
+                <button class="functional__tab" type="button" role="tab" aria-selected="false" data-tab="prices">
+                  <span class="functional__tab-icon"><img src="landingpage/img/icon/prices.svg" width="35px" height="35px"></span>
+                  <span>Редактор цен</span>
+                </button>
+                <button class="functional__tab" type="button" role="tab" aria-selected="false" data-tab="analytics">
+                  <span class="functional__tab-icon"><img src="landingpage/img/icon/Analytics.svg" width="35px" height="35px"></span>
+                  <span>Аналитика</span>
+                </button>
+                <button class="functional__tab" type="button" role="tab" aria-selected="false" data-tab="documents">
+                  <span class="functional__tab-icon"><img src="landingpage/img/icon/Documents.svg" width="35px" height="35px"></span>
+                  <span>Бухгалтерские документы</span>
+                </button>
+                
+              </nav>
+
+              <div class="functional__panel">
+                <div class="functional__content functional__content--active" data-panel="bookings" role="tabpanel">
+                  <h3 class="functional__content-title">Управлять бронированиями — легко!</h3>
+                  <ul class="functional__list">
+                    <li>Шахматка с наглядным представлением загрузки номеров по дням и категориям.</li>
+                    <li>Статусы оплат, заездов и выездов — всё видно в один клик, без лишних таблиц.</li>
+                    <li>Автоматический расчёт стоимости проживания и защита от овербукинга.</li>
+                  </ul>
+                  <div class="functional__carousel" data-carousel="bookings">
+                    <div class="functional__slides">
+                      <div class="functional__slide functional__slide--active">
+                        <img src="landingpage/img/work_with_bookings_1.png" alt="Шахматка бронирований в Hotel KI">
+                      </div>
+                      <div class="functional__slide">
+                        <img src="landingpage/img/work_with_bookings_2.png" alt="Данные по бронированию">
+                      </div>
+                      <div class="functional__slide">
+                        <img src="landingpage/img/work_with_bookings_3.png" alt="Новые бронирования">
+                      </div>
+                    </div>
+                    <div class="functional__carousel-nav">
+                      <button class="functional__carousel-btn" type="button" data-direction="prev" aria-label="Предыдущий слайд">‹</button>
+                      <div class="functional__carousel-dots"></div>
+                      <button class="functional__carousel-btn" type="button" data-direction="next" aria-label="Следующий слайд">›</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="functional__content" data-panel="direct-sales" role="tabpanel">
+                  <h3 class="functional__content-title">Прямые продажи без агентских комиссий</h3>
+                  <ul class="functional__list">
+                    <li>Виджет бронирования встраивается на ваш сайт или лендинг за несколько минут.</li>
+                    <li>Гости видят актуальные цены и свободные номера в реальном времени.</li>
+                    <li>Бронирования принимаются круглосуточно — даже когда администратор офлайн.</li>
+                  </ul>
+                  <div class="functional__carousel" data-carousel="direct-sales">
+                    <div class="functional__slides">
+                      <div class="functional__slide functional__slide--active">
+                        <img src="landingpage/img/booking_module_demo.png" alt="Модуль прямых продаж на сайте отеля">
+                      </div>
+                      <div class="functional__slide functional__slide">
+                        <img src="landingpage/img/booking_step1.png" alt="Первый шаг оформления бронирования">
+                      </div>
+                      <div class="functional__slide functional__slide">
+                        <img src="landingpage/img/booking_step2.png" alt="Второй шаг оформления бронирования">
+                      </div>
+                      <div class="functional__slide functional__slide">
+                        <img src="landingpage/img/booking_step3.png" alt="Третий шаг оформления бронирования">
+                      </div>
+                    </div>
+                    
+                    <div class="functional__carousel-nav">
+                      <button class="functional__carousel-btn" type="button" data-direction="prev" aria-label="Предыдущий слайд">‹</button>
+                      <div class="functional__carousel-dots"></div>
+                      <button class="functional__carousel-btn" type="button" data-direction="next" aria-label="Следующий слайд">›</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="functional__content" data-panel="online-page" role="tabpanel">
+                  <h3 class="functional__content-title">Готовая online‑страница отеля</h3>
+                  <ul class="functional__list">
+                    <li>Мини‑сайт с описаниями номеров, фотографиями и контактами — без участия программистов.</li>
+                    <li>Встроенный модуль поиска и бронирования прямо на странице отеля.</li>
+                    <li>Единый стиль с системой управления — обновления синхронизируются автоматически.</li>
+                  </ul>
+                  <div class="functional__carousel" data-carousel="online-page">
+                    <div class="functional__slides">
+                      <div class="functional__slide functional__slide--active">
+                        <img src="landingpage/img/lending_demo.png" alt="Лендинг отеля с модулем бронирования">
+                      </div>
+                      <div class="functional__slide functional__slide">
+                        <img src="landingpage/img/lending_demo_module.png" alt="Лендинг отеля с модулем бронирования">
+                      </div>
+                      <div class="functional__slide functional__slide">
+                        <img src="landingpage/img/lending_demo_footer.png" alt="Лендинг отеля с модулем бронирования">
+                      </div>
+        
+                    </div>
+                    <div class="functional__carousel-nav">
+                      <button class="functional__carousel-btn" type="button" data-direction="prev" aria-label="Предыдущий слайд">‹</button>
+                      <div class="functional__carousel-dots"></div>
+                      <button class="functional__carousel-btn" type="button" data-direction="next" aria-label="Следующий слайд">›</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="functional__content" data-panel="prices" role="tabpanel">
+                  <h3 class="functional__content-title">Гибкое управление ценами</h3>
+                  <ul class="functional__list">
+                    <li>Настройка тарифов, сезонов и специальных предложений по категориям номеров.</li>
+                    <li>Массовое изменение цен на выбранные даты — за секунды, а не часы.</li>
+                    <li>Разные цены для прямых продаж, контрагентов и каналов — всё в одном редакторе.</li>
+                  </ul>
+                  <div class="functional__carousel" data-carousel="prices">
+                    <div class="functional__slides">
+                      <div class="functional__slide functional__slide--active">
+                        <img src="landingpage/img/price_editor_lending.png" alt="Редактор цен и тарифов">
+                      </div>
+                      <div class="functional__slide">
+                        <img src="landingpage/img/show_prices.png" alt="Цены в шахматке бронирований">
+                      </div>
+                    </div>
+                    <div class="functional__carousel-nav">
+                      <button class="functional__carousel-btn" type="button" data-direction="prev" aria-label="Предыдущий слайд">‹</button>
+                      <div class="functional__carousel-dots"></div>
+                      <button class="functional__carousel-btn" type="button" data-direction="next" aria-label="Следующий слайд">›</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="functional__content" data-panel="analytics" role="tabpanel">
+                  <h3 class="functional__content-title">Аналитика для управленческих решений</h3>
+                  <ul class="functional__list">
+                    <li>Загрузка номерного фонда, средняя цена и выручка — в наглядных отчётах.</li>
+                    <li>Длительность проживания, источники бронирований и динамика по периодам.</li>
+                    <li>Данные в реальном времени для управляющих и собственников отеля.</li>
+                  </ul>
+                  <div class="functional__carousel" data-carousel="analytics">
+                    <div class="functional__slides">
+                      <div class="functional__slide functional__slide--active">
+                        <img src="landingpage/img/statistics_lending.png" alt="Аналитика загрузки и выручки">
+                      </div>
+                      <div class="functional__slide">
+                        <img src="landingpage/img/statistic_table_lending.png" alt="Отчет в табличном виде">
+                      </div>
+                    </div>
+                    <div class="functional__carousel-nav">
+                      <button class="functional__carousel-btn" type="button" data-direction="prev" aria-label="Предыдущий слайд">‹</button>
+                      <div class="functional__carousel-dots"></div>
+                      <button class="functional__carousel-btn" type="button" data-direction="next" aria-label="Следующий слайд">›</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="functional__content" data-panel="documents" role="tabpanel">
+                  <h3 class="functional__content-title">Бухгалтерские документы из системы</h3>
+                  <ul class="functional__list">
+                    <li>Акты, счета и счёт‑фактуры формируются автоматически по данным бронирования.</li>
+                    <li>Все документы доступны в личном кабинете и готовы к отправке контрагенту.</li>
+                  </ul>
+                  <div class="functional__carousel" data-carousel="documents">
+                    <div class="functional__slides">
+                      <div class="functional__slide functional__slide--active">
+                        <img src="landingpage/img/documents.png" alt="Доступные бухгалтерские документы">
+                      </div>
+                      <div class="functional__slide">
+                        <img src="landingpage/img/doc_example.png" alt="Образец сформированного документа">
+                      </div>
+                    </div>
+                    <div class="functional__carousel-nav">
+                      <button class="functional__carousel-btn" type="button" data-direction="prev" aria-label="Предыдущий слайд">‹</button>
+                      <div class="functional__carousel-dots"></div>
+                      <button class="functional__carousel-btn" type="button" data-direction="next" aria-label="Следующий слайд">›</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- About -->
+        <section class="section" id="about">
+          <div class="container about">
+            <div class="about__text">
+              <h2 class="section__title">Создано в Сибири — работает для всей России</h2>
+              <p class="section__subtitle">
+                Hotel KI рождена в Новосибирском Академгородке, где научная экспертиза встречается с IT‑проектами
+                федерального масштаба. Наша команда уже создавала сервисы, которыми пользуются миллионы людей.
+              </p>
+              <p class="about__extra">
+                Мы знаем, как работать с высокой нагрузкой, безопасностью данных и сложными бизнес‑процессами
+                в туризме и гостиничном секторе.
+              </p>
+              <div class="about__trust">
+                <div class="about__badge">10+ лет в разработке B2C и B2B‑проектов</div>
+                <div class="about__badge">Инфраструктура в РФ</div>
+              </div>
+            </div>
+            <div class="about__side">
+              <div class="about-card">
+                <div class="about-card__label">Команда</div>
+                <div class="about-card__metric">
+                  <span class="about-card__metric-value">15+</span>
+                  <span class="about-card__metric-caption">специалистов в продукте и поддержке</span>
+                </div>
+                <div class="about-card__metric">
+                  <span class="about-card__metric-value">99.5%</span>
+                  <span class="about-card__metric-caption">uptime сервиса за прошлый год</span>
+                </div>
+                <div class="about-card__note">
+                  Мы готовы помочь с миграцией данных, обучением персонала и тестовым периодом без рисков.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section section--soft" id="faq">
+          <div class="container">
+            <div class="section__head">
+              <h2 class="section__title">Часто задаваемые вопросы</h2>
+              <p class="section__subtitle">
+                Если не нашли ответ — оставьте заявку на консультацию, и мы подробно расскажем о системе.
+              </p>
+            </div>
+
+            <!-- <img src="landingpage/img/faq.png"> -->
+
+            <div class="faq">
+              <div class="faq-item">
+                <button class="faq-item__header" type="button">
+                  <span class="faq-item__question">Как проходит подключение отеля к системе?</span>
+                  <span class="faq-item__icon"></span>
+                </button>
+                <div class="faq-item__body" style="max-height: 0px;">
+                  <p>
+                    Мы помогаем собрать данные по номерному фонду, тарифам и бронированиям, настраиваем систему
+                    под ваши процессы и обучаем команду. Обычно базовый запуск занимает от 3 до 7 рабочих дней.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-item__header" type="button">
+                  <span class="faq-item__question">Нужен ли отдельный сервер или установка ПО?</span>
+                  <span class="faq-item__icon"></span>
+                </button>
+                <div class="faq-item__body" style="max-height: 0px;">
+                  <p>
+                    Нет. Hotel KI — облачный сервис. Достаточно браузера и доступа в Интернет. Обновления
+                    и резервное копирование происходят автоматически.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-item__header" type="button">
+                  <span class="faq-item__question">Можно ли работать из разных городов и устройств?</span>
+                  <span class="faq-item__icon"></span>
+                </button>
+                <div class="faq-item__body" style="max-height: 0px;">
+                  <p>
+                    Да. Вы можете зайти в систему с любого устройства: рабочего места администратора,
+                    ноутбука управляющего или планшета собственника. Доступ разграничивается по ролям.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-item__header" type="button">
+                  <span class="faq-item__question">Что такое модуль бронирования?</span>
+                  <span class="faq-item__icon"></span>
+                </button>
+                <div class="faq-item__body" style="max-height: 0px;">
+                  <p>
+                    Модуль бронирования – это система, которая позволяет гостям самостоятельно оформить
+                    и оплатить бронирование на вашем сайте. Бронирования из модуля автоматически появляются
+                    в шахматке, а гости получают ваучер на проживание и чек по электронной почте.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-item__header" type="button">
+                  <span class="faq-item__question">Могу ли я подключить только некоторые модули?</span>
+                  <span class="faq-item__icon"></span>
+                </button>
+                <div class="faq-item__body" style="max-height: 0px;">
+                  <p>
+                    Да, вы можете приобрести только модуль
+                    управления отелем и не подключать модуль поиска и бронирования для сайта.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-item__header" type="button">
+                  <span class="faq-item__question">У меня свой сайт. Можно ли встроить в него ваш модуль бронирования?</span>
+                  <span class="faq-item__icon"></span>
+                </button>
+                <div class="faq-item__body" style="max-height: 0px;">
+                  <p>
+                    Да, вы можете встроить наш модуль бронирования на ваш сайт. 
+                    Наши технические специалисты помогут с настройкой.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-item__header" type="button">
+                  <span class="faq-item__question">Можно ли подключить к модулю бронирования онлайн-оплату?</span>
+                  <span class="faq-item__icon"></span>
+                </button>
+                <div class="faq-item__body" style="max-height: 0px;">
+                  <p>
+                    Да, наш сервис позволяет подключить платежную систему Robokassa. С ее помощью гости
+                    смогут оплачивать бронирования на сайте, а вы – управлять приходами и выводить средства,
+                    а также осуществлять возвраты. Кроме того, Robokassa позволяет использовать облачные чеки
+                    без покупки кассы для каждой оплаты по 54-ФЗ.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-item__header" type="button">
+                  <span class="faq-item__question">Как узнать о бронированиях, поступивших через модуль?</span>
+                  <span class="faq-item__icon"></span>
+                </button>
+                <div class="faq-item__body" style="max-height: 0px;">
+                  <p>
+                    Бронирования автоматически появляются в системе в шахматке бронирований. Все полученные оплаты
+                    будут включены в созданное бронирование, а неоплаченные предбронирования будут удаляться автоматически.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-item__header" type="button">
+                  <span class="faq-item__question">Мой сервис предоставляет гостям различные услуги.
+                    Могу ли я вести их учет в вашей системе?</span>
+                  <span class="faq-item__icon"></span>
+                </button>
+                <div class="faq-item__body" style="max-height: 0px;">
+                  <p>
+                    Да, наша система позволяет добавлять и настраивать услуги, а также прикреплять
+                    их к отдельным комнатам или бронированиям с автоматическим перерасчетом стоимости.
+                  </p>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-item__header" type="button">
+                  <span class="faq-item__question">Как осуществляется тех.поддержка?</span>
+                  <span class="faq-item__icon"></span>
+                </button>
+                <div class="faq-item__body" style="max-height: 0px;">
+                  <p>
+                    Если у вас возникнут вопросы по работе с системой, вы сможете связаться
+                    с техническим специалистом удобным для вас способом: написать в чате или договориться о звонке. Мы с радостью вам поможем!
+                  </p>
+                </div>
+              </div>
+
+              
+            </div>
+          </div>
+        </section>
+
+        <!-- Demo CTA -->
+        <section class="section section--highlight" id="demo" style="background-image: url(/landingpage/img/background.png); background-size:cover;">
+          <div class="container demo">
+            <div class="demo__text">
+              <h2 class="section__title">Испытайте сервис Hotel KI бесплатно</h2>
+              <p class="section__subtitle">
+                Оставьте контакты — мы покажем систему на живом примере вашего отеля и предложим сценарии роста
+                прямых продаж.
+              </p>
+            </div>
+	
+            <form class="demo__form" id="request-form" action="https://hotel-ki.ru/landing_send_hotel_request.php" method="post" onsubmit="onSubscribeSubmit(this)">
+              <div class="form-grid">
+                <label class="field">
+                  <span class="field__label">Имя</span>
+                  <input class="field__input" type="text" name="name" placeholder="Как к вам обращаться?">
+                </label>
+		<label class="field">
+                  <span class="field__label">Название отеля*</span>
+                  <input class="field__input" type="text" name="hotel_name" required="" placeholder="Название вашего отеля?">
+                </label>
+                <label class="field">
+                  <span class="field__label">Телефон*</span>
+                  <input class="field__input" type="text" required="" name="phone" placeholder="+7 999 000‑00‑00">
+                </label>
+		<label class="field">
+                  <span class="field__label">E‑mail*</span>
+                  <input class="field__input" type="email" name="email" required="" placeholder="Ваш email">
+                </label>
+                <label class="field form-grid__full">
+                  <span class="field__label">Адрес</span>
+                  <input class="field__input" type="text" name="addres" placeholder="Где расположен ваш отель?">
+                </label>
+              </div>
+		<label class="field form-grid__full">
+		<p class="demo__note"><input class="field__input" name="agree_checkbox" required="" type="checkbox" value="1" style="vertical-align:sub;">Нажимая на кнопку, вы соглашаетесь с обработкой персональных данных и условиями оферты.</p>
+                </label>
+			  
+              <button class="button button--primary button--wide" type="submit">
+                Отправить заявку на демо
+              </button>
+            </form>
+			
+	<div id="form_sended" class="demo__form" style="display: none;">
+		<h2 class="section__title">Ваш запрос отправлен</h2>
+		<p class="demo__note">Ваш запрос на Демо-доступ отправлен. Вскоре наш специалист свяжется с вами и предоставит доступ.</p>
+	</div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer / Contacts -->
+      <footer class="footer" id="contacts">
+        <div class="container footer__inner">
+          <div class="footer__col">
+            <div class="footer__logo">
+              <img src="images/logo_hotelki.svg" alt="Hotel KI" class="footer__logo-img">
+              <span class="footer__logo-text">Hotel KI (Хотелки) — система управления номерным фондом</span>
+            </div>
+            <p class="footer__copy">
+              © <span id="js-year">2026</span> Hotel KI. Система управления номерным фондом для отелей, турбаз и апартаментов. ООО «Город Диджитал»
+            </p>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__title">Контакты отдела продаж</h3>
+            <div class="footer__contacts">
+              <a href="tel:+79137842018" class="footer__link">+7 913 784‑20‑18</a>
+              <a href="tel:+79139253269" class="footer__link">+7 913 925‑32‑69</a>
+              <a href="mailto:esmolyanich@idgorod.ru" class="footer__link">esmolyanich@idgorod.ru</a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <h3 class="footer__title">Юридическая информация</h3>
+            <p class="footer__text">
+              ООО «Город Диджитал», г. Новосибирск<br>
+              ИНН 5407460307, ОГРН 1105476101873
+            </p>
+            <div class="footer__links">
+		<a href="https://hotel-ki.ru/doc/oferta.pdf" class="footer__link">Публичная оферта</a>
+    <a href="https://hotel-ki.ru/doc/attachment_to_oferta.pdf" class="footer__link">Приложение к оферте</a>
+		<a href="https://hotel-ki.ru/doc/privacy_policy.pdf" class="footer__link">Политика конфиденциальности</a>
+		<a href="https://lk.hotel-ki.ru/" class="footer__link">Вход в личный кабинет</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="landingpage/js/main.js?v=1"></script>
+	
+<!-- Yandex.Metrika counter -->
+<script>
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+    ym(89910505, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true
+    });
+ </script>
+
+<script src="landingpage/js/jquery.min.js"></script>
+
+
+<script>
+function reCaptchaSubscribe(form_element) {
+	grecaptcha.ready(function() {
+		grecaptcha.execute(recaptcha_key, {action: 'homepage'})
+			.then(function(token) {
+				$(form_element).prepend('<input type="hidden" name="token" value="' + token + '">');
+				//$('.loader').show();
+				$.ajax({
+					type: "POST",
+					url: $(form_element).attr("action"),
+					data: $(form_element).serialize(),
+					dataType: "html",
+					success: function(data, textStatus){
+						$('#form_sended').show();
+						$('#request-form').hide();
+
+                        ym(103017590,'reachGoal','request_send');
+					},
+					error: function(XMLHttpRequest, textStatus, errorThrown)
+					{
+						XMLHttpRequest.status == '401';
+						$("#subscribe_form_text").html("We have a problem, try to later.");
+					}
+				});
+			});
+	 });
+}
+
+function showAll(arr)
+{
+	for(var i = 0; i < $(arr).length; i++){
+		$(arr[i]).show();
+	}
+}
+
+function hideAll(arr)
+{
+	for(var i = 0; i < $(arr).length; i++){
+		$(arr[i]).hide();
+	}
+}
+		
+function onSubscribeSubmit(form_element, token) {
+	event.preventDefault();
+	reCaptchaSubscribe(form_element);
+}
+		
+</script>
+
+ <noscript><div><img src="https://mc.yandex.ru/watch/89910505" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+ <!-- /Yandex.Metrika counter -->
+  
+
+
+<div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" width="256" height="60" role="presentation" name="a-j933zb8c0bxb" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="landingpage/anchor.html"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;" src="landingpage/saved_resource.html"></iframe></div></body></html>

@@ -1,0 +1,240 @@
+/* Landing page — лендинг для гостиницы */
+
+.hero--full .hero__inner {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.hero__subtitle--accent {
+  color: var(--accent-dark);
+  font-weight: 500;
+}
+
+.hero-benefits {
+  margin-top: 28px;
+  padding: 18px 20px;
+  background: rgba(222, 244, 229, 0.5);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(197, 221, 205, 0.7);
+}
+
+.hero-benefits__title {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hero-benefits__list {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.hero-benefits__list li {
+  margin-bottom: 4px;
+}
+
+.hero-benefits__badge {
+  margin-top: 14px;
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Landing grid */
+.landing-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.landing-grid--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card__list {
+  margin: 10px 0 0;
+  padding-left: 20px;
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.card__list--compact {
+  margin-top: 8px;
+}
+
+.card__list li {
+  margin-bottom: 4px;
+}
+
+.card--negative {
+  border-color: rgba(200, 120, 80, 0.3);
+  background: linear-gradient(135deg, #fff9f7, #fdf6f3);
+}
+
+.card--positive {
+  border-color: rgba(28, 165, 111, 0.25);
+  background: linear-gradient(135deg, #f4fff8, #f9fffb);
+}
+
+/* Solution flow */
+.solution-flow {
+  max-width: 720px;
+  padding: 24px 28px;
+  background: #f9fffb;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(197, 221, 205, 0.9);
+}
+
+.solution-flow__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.solution-flow__note {
+  margin: 12px 0 0;
+  font-size: 14px;
+  color: var(--accent-dark);
+  font-weight: 500;
+}
+
+/* Landing cards */
+.landing-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  border: 1px solid rgba(28, 165, 111, 0.2);
+  font-size: 14px;
+  color: var(--accent-dark);
+}
+
+/* Benefits pack */
+.benefits-pack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.benefits-pack__item {
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  background: #f9fffb;
+  border: 1px solid rgba(197, 221, 205, 0.9);
+  font-size: 14px;
+}
+
+/* Steps */
+.steps {
+  max-width: 560px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.step {
+  position: relative;
+  padding: 14px 0 14px 52px;
+  font-size: 16px;
+  line-height: 1.5;
+  counter-increment: step;
+}
+
+.step::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Target list */
+.target-list {
+  max-width: 560px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.target-list li {
+  position: relative;
+  padding: 10px 0 10px 28px;
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.target-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.card--wide {
+  grid-column: span 2;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .landing-grid--2 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .landing-cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero__inner .hero__visual {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-benefits {
+    padding: 14px 16px;
+  }
+
+  .solution-flow {
+    padding: 18px 20px;
+  }
+
+  .solution-flow__text {
+    font-size: 15px;
+  }
+
+  .card--wide {
+    grid-column: span 1 !important;
+  }
+}
