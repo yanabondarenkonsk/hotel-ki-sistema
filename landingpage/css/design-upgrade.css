@@ -1,0 +1,208 @@
+/*
+ * Design Upgrade — Plus Jakarta Sans + Dimensional Layering + Signature Element
+ * Based on ui-ux-pro-max (Friendly SaaS typography, Dimensional Layering style)
+ * and frontend-design (hero as thesis, type personality, one signature element)
+ */
+
+/* ── 1. FONT: Plus Jakarta Sans (ui-ux-pro-max: Friendly SaaS) ── */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── 2. DIMENSIONAL LAYERING (ui-ux-pro-max: 4 elevation levels) ── */
+:root {
+  --el-1: 0 1px 3px rgba(40,55,20,.07), 0 1px 2px rgba(40,55,20,.05);
+  --el-2: 0 4px 14px rgba(40,55,20,.10), 0 2px 5px rgba(40,55,20,.06);
+  --el-3: 0 12px 32px rgba(40,55,20,.13), 0 4px 10px rgba(40,55,20,.07);
+  --el-4: 0 28px 64px rgba(40,55,20,.20), 0 8px 22px rgba(40,55,20,.10);
+}
+
+/* ── 3. HERO AS THESIS (frontend-design: biggest visual impact first) ── */
+
+/* Fix absolute path for GitHub Pages */
+.hero.section--highlight {
+  background-image: url('../img/background.png') !important;
+  background-size: cover !important;
+}
+
+.hero__title {
+  font-size: clamp(36px, 5.5vw, 62px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.04;
+  margin: 18px 0 0;
+}
+
+.hero__title-accent {
+  display: block;
+  background: linear-gradient(115deg, #2d5f0a 0%, #55b300 45%, #8fd400 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding-bottom: 4px;
+}
+
+.hero__subtitle {
+  font-size: 19px;
+  line-height: 1.7;
+  margin-top: 20px;
+}
+
+/* Hero card — highest elevation */
+.hero-card {
+  box-shadow: var(--el-4);
+  border-color: rgba(85,179,0,.25);
+}
+
+/* ── 4. SIGNATURE ELEMENT: shimmer CTA button (frontend-design) ── */
+@keyframes ki-shimmer {
+  0%   { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+.button--primary {
+  background: linear-gradient(90deg, #3a6b0e, #55b300, #7ac41f, #55b300, #3a6b0e);
+  background-size: 200% auto;
+  animation: ki-shimmer 5s linear infinite;
+  box-shadow: 0 8px 28px rgba(85,179,0,.32);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.button--primary:hover {
+  animation-duration: 1.8s;
+  transform: translateY(-2px);
+  box-shadow: 0 18px 44px rgba(85,179,0,.50);
+}
+
+/* ── 5. TYPOGRAPHY CONTRAST (frontend-design: make type memorable) ── */
+.section__title {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+}
+
+.section__subtitle {
+  font-size: 18px;
+  line-height: 1.75;
+  margin-top: 16px;
+}
+
+.card__title {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.card__text {
+  line-height: 1.75;
+}
+
+/* ── 6. CARDS — dimensional layers ── */
+.card {
+  box-shadow: var(--el-2);
+  transition: transform .18s ease-out, box-shadow .18s ease-out, border-color .18s ease-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--el-3);
+  border-color: rgba(85,179,0,.5);
+}
+
+/* ── 7. ABOUT METRICS — bigger numbers as visual anchors ── */
+.about-card__metric-value {
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.about-card__label {
+  font-size: 13px;
+  letter-spacing: .1em;
+}
+
+/* ── 8. FAQ — cleaner elevation ── */
+.faq-item {
+  box-shadow: var(--el-1);
+  transition: box-shadow .14s ease-out;
+}
+
+.faq-item:hover {
+  box-shadow: var(--el-2);
+}
+
+/* ── 9. DEMO FORM — el-3 ── */
+.demo__form {
+  box-shadow: var(--el-3);
+}
+
+/* ── 10. HEADER — subtle shadow ── */
+.header {
+  box-shadow: var(--el-2);
+}
+
+/* ── 11. NAV links tighter tracking ── */
+.header__nav {
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+/* ── 12. HERO label dot pulse ── */
+@keyframes ki-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: .6; transform: scale(1.4); }
+}
+
+.hero__label::before {
+  animation: ki-pulse 2.2s ease-in-out infinite;
+}
+
+/* ── 13. FOOTER ── */
+.footer__title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* ── 14. FEATURE TABS (если есть) ── */
+.functional__tab-btn {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+}
+
+/* ── 15. SCROLL REVEAL ── */
+@keyframes ki-fadeup {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.card, .faq-item, .about-card, .demo__form {
+  animation: ki-fadeup .5s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, .button--primary {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: clamp(30px, 8vw, 42px);
+    letter-spacing: -0.03em;
+  }
+  .section__title {
+    font-size: clamp(24px, 6vw, 34px);
+  }
+  .about-card__metric-value {
+    font-size: 32px;
+  }
+}
